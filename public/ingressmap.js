@@ -21,11 +21,11 @@
 ///
 /// constants
 ///
-var clientId = '18011919441-dhpckpmlmfsrldtlaorfdp1khba4pgbh.apps.googleusercontent.com';
+var clientId = '304799927293-lv51a7hnjc6tfffd0om8ls3th117lhk9.apps.googleusercontent.com';
 var scopes = 'https://www.googleapis.com/auth/gmail.readonly';
 var userId = 'me';
 var maxResults = 100;
-var q = 'subject:"Ingress Damage Report: Entities attacked by" from:ingress-support@google.com';
+var q = 'subject:"Ingress Damage Report: Entities attacked by" from:{ingress-support@google.com ingress-support@nianticlabs.com}';
 var maxLoop = 100;
 var parserDebug = false;
 var version = '0.2';
