@@ -29,6 +29,8 @@ app.use('/users', users);
 
 app.get('/ingressmap.html', function(req, res) {
   res.render('ingressmap', { clientId: process.env.GMAIL_CLIENT_ID });
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
