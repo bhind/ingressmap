@@ -10,6 +10,8 @@ var users = require('./routes/users');
 
 var app = express();
 
+console.log('coco');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -25,6 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
+app.get('/ingressmap.html', function(req, res) {
+  res.render('ingressmap' { clientId: process.env.GMAIL_CLIENT_ID });
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
