@@ -25,9 +25,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
-app.get('/', function(req, res) {
-//  res.render('ingressmap', { clientId: process.env.GMAIL_CLIENT_ID });
-  res.render('index', { title: process.env.GMAIL_CLIENT_ID });
+console.log('coco0');
+
+app.get('/ingressmap.html', function(req, res) {
+  res.render('ingressmap', { clientId: process.env.GMAIL_CLIENT_ID });
+  console.log('coco2');
 });
 
 // catch 404 and forward to error handler
