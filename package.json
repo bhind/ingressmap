@@ -1,0 +1,25 @@
+{
+  "name": "ingressdamagemap_server",
+  "version": "0.0.1",
+  "description": "ingress damage map server version",
+  "main": "ingressdamagemap_server.js",
+  "engines": {
+    "node": "6.5.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhind/ingressmap.git"
+  },
+  "author": "bhind",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/bhind/ingressmap/issues"
+  },
+  "homepage": "https://github.com/bhind/ingressmap#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
