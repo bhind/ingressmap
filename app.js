@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
-app.get('/ingressmap.html', function(req, res) {
+app.get('/', function(req, res) {
   res.render('ingressmap', { clientId: process.env.GMAIL_CLIENT_ID });
 });
 
