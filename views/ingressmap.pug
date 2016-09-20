@@ -26,12 +26,15 @@ head
   title Ingress Damage Reports Map
   link(rel='stylesheet', type='text/css', href='stylesheets/ingressmap.css')
   link(rel='shortcut icon', href='favicon.ico')
+  script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+  script(type='text/javascript', src='https://apis.google.com/js/client.js')
+  script(type='text/javascript').
+    var _s = document.createElement('script');
+    _s.type = 'text/javascript';
+    _s.src = 'https://maps.googleapis.com/maps/api/js?key=#{mapApiKey}&sensor=true';
+    document.head.appendChild(_s);
   script(type='text/javascript').
     var clientId = '#{clientId}';
-    alert(clientId);
-  script(type='text/javascript', src='https://apis.google.com/js/client.js')
-  script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=#{mapApiKey}&sensor=true')
-  script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
   script(type='text/javascript', src='javascripts/ingressmap.js')
 body
   #panel
