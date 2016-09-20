@@ -31,3 +31,5 @@ npm-debug.log
 
 # for mac os x
 .DS_Store
+
+.idea

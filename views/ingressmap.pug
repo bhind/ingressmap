@@ -1,5 +1,39 @@
-html
-  head
-    script.
-      var clientId = '#{clientId}';
-      alert(clientId);
+doctype transitional
+html(xmlns='http://www.w3.org/1999/xhtml', xml:lang='en', lang='en')
+head
+  //
+    ingressmap.      Copyright (C) 2014 Sabara <sabara dot ingress at gmail dot com>
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+  meta(http-equiv='Content-Style-Type', content='text/css')
+  meta(http-equiv='Content-Script-Type', content='text/javascript')
+  //
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="Thu, 01 Dec 1994 16:00:00 GMT" />
+  meta(name='viewport', content='initial-scale=1.0, user-scalable=no')
+  meta(name='apple-mobile-web-app-capable', content='yes')
+  title Ingress Damage Reports Map
+  link(rel='stylesheet', type='text/css', href='stylesheets/ingressmap.css')
+  link(rel='shortcut icon', href='favicon.ico')
+  script(type='text/javascript').
+    var clientId = '#{clientId}';
+    alert(clientId);
+  script(type='text/javascript', src='https://apis.google.com/js/client.js')
+  script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCiHaZgLgcz5Vv3VfhD0CRxT_Mdplec5zI&sensor=true')
+  script(type='text/javascript', src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+  script(type='text/javascript', src='javascripts/ingressmap.js')
+body
+  #panel
+    #content Ingress Damage Reports Map
+  #map_canvas(style='width:100%; height:100%')
