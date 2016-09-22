@@ -1,4 +1,6 @@
 var express = require('express');
+var stylus = require('stylus');
+var nib = require('nib');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -13,6 +15,8 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+
+app.use(stylus.middleware({src: __dirname + '/public', compile: compile}));
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -65,3 +69,10 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+function compile(str, path) {
+  return stylus(str)
+      .set('filename', path)
+      .set('compress', true)
+      .use(nib());
+}
