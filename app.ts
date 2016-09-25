@@ -24,7 +24,19 @@ class TheApp {
         this.app.set('views', path.join(__dirname, 'views'));
         this.app.set('view engine', 'pug');
 
-        this.app.use(stylus.middleware({src: __dirname + '/views', dest: __dirname + '/public', compile: compile}));
+        this.app.use(stylus.middleware(
+            {
+                src: __dirname + '/views',
+                dest: __dirname + '/public',
+                compile: function(str, path) {
+                    return stylus(str)
+                        .set('filename', path)
+                        .set('compress', true)
+                        .use(nib());
+                }
+            }
+            )
+        );
 
         // uncomment after placing your favicon in /public
         // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -76,13 +88,6 @@ class TheApp {
         });
 
         module.exports = this.app;
-
-        function compile(str, path) {
-            return stylus(str)
-                .set('filename', path)
-                .set('compress', true)
-                .use(nib());
-        }
     }
 }
 
