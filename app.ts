@@ -1,20 +1,19 @@
 /**
  * Created by bhind on 9/24/16.
  */
-import express = require('express');
-import stylus = require('stylus');
-import nib = require('nib');
-import path = require('path');
-import favicon = require('serve-favicon');
-import logger = require('morgan');
-import cookieParser = require('cookie-parser');
-import bodyParser = require('body-parser');
+import * as express from './node_modules/@types/express/index';
+import * as stylus from './node_modules/@types/stylus/index';
+import * as nib from 'nib';
+import * as path from 'path';
+// import * as favicon from './node_modules/@types/serve-favicon/index';
+import * as logger from './node_modules/@types/morgan/index';
+import * as cookieParser from './node_modules/@types/cookie-parser/index';
+import * as bodyParser from './node_modules/@types/body-parser/index';
 
-import routes = require('./routes/index');
-import users = require('./routes/users');
+import * as routes from './routes/index.js';
+import * as users from './routes/users.js';
 
 // let app = express();
-
 class TheApp {
     private app: express;
     constructor() {
@@ -87,5 +86,5 @@ class TheApp {
     }
 }
 
-let theApp = TheApp();
-theApp.execute();
+let express_app: TheApp = new TheApp();
+express_app.execute();
