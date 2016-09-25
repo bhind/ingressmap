@@ -1,17 +1,17 @@
 /**
  * Created by bhind on 9/24/16.
  */
-import * as express from './node_modules/@types/express/index';
-import * as stylus from './node_modules/@types/stylus/index';
+import * as express from 'express';
+import * as stylus from 'stylus';
 import * as nib from 'nib';
 import * as path from 'path';
-// import * as favicon from './node_modules/@types/serve-favicon/index';
-import * as logger from './node_modules/@types/morgan/index';
-import * as cookieParser from './node_modules/@types/cookie-parser/index';
-import * as bodyParser from './node_modules/@types/body-parser/index';
+// import * as favicon from 'serve-favicon';
+import * as logger from 'morgan';
+import * as cookieParser from 'cookie-parser';
+import * as bodyParser from 'body-parser';
 
-import * as routes from './routes/index.js';
-import * as users from './routes/users.js';
+import * as routes from './routes/index';
+import * as users from './routes/users';
 
 // let app = express();
 class TheApp {

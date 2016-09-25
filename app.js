@@ -1,16 +1,16 @@
 /**
  * Created by bhind on 9/24/16.
  */
-var express = require('./node_modules/@types/express/index');
-var stylus = require('./node_modules/@types/stylus/index');
+var express = require('express');
+var stylus = require('stylus');
 var nib = require('nib');
 var path = require('path');
-// import * as favicon from './node_modules/@types/serve-favicon/index';
-var logger = require('./node_modules/@types/morgan/index');
-var cookieParser = require('./node_modules/@types/cookie-parser/index');
-var bodyParser = require('./node_modules/@types/body-parser/index');
-var routes = require('./routes/index.js');
-var users = require('./routes/users.js');
+// import * as favicon from 'serve-favicon';
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var routes = require('./routes/index');
+var users = require('./routes/users');
 // let app = express();
 var TheApp = (function () {
     function TheApp() {
