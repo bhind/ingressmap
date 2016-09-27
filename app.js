@@ -1,3 +1,5 @@
+"use sttict";
+"use strict";
 var express = require('express');
 var stylus = require('stylus');
 var nib = require('nib');
@@ -61,6 +63,6 @@ var TheApp = (function () {
         module.exports = this.app;
     };
     return TheApp;
-})();
+}());
 var express_app = new TheApp();
 express_app.execute();

@@ -1,6 +1,8 @@
 /**
  * Created by bhind on 9/24/16.
  */
+"use sttict";
+
 import * as express from 'express';
 import * as stylus from 'stylus';
 import * as nib from 'nib';
@@ -13,9 +15,8 @@ import * as bodyParser from 'body-parser';
 import * as routes from './routes/index';
 import * as users from './routes/users';
 
-// let app = express();
 class TheApp {
-    private app: express;
+    private app;
     constructor() {
         this.app = express();
     }
