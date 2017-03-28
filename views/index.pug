@@ -2,3 +2,8 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  div.login-wrapper
+    p You need to log in.
+    #{googleLoginButtonId}
+  .main-application
+    p Hello, #{userDisplayName}!
